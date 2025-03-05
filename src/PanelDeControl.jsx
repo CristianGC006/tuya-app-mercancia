@@ -1,28 +1,37 @@
-import imglogo from './assets/UsuarioIcono.png';
+
 import Card from './Card';
-function PanelControl(){
-    return(
-    <><section className="panel-control">
-            <aside className="panel-control-aside">
-                <div>
-                    <img src={imglogo} alt="Logo" />
-                </div>
-                <nav>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                </nav>
-            </aside>
+import MenuLateral from './MenuLaterar';
+function PanelControl() {
+    let envios = [
+        {
+            origen: 'medellin',
+            destino: 'Bogota',
+            id: '123455'
+        },
+        {
+            origen: 'Casanare',
+            destino: 'Bogota',
+            id: '125455'
+        },
+        {
+            origen: 'medellin',
+            destino: 'Barranquilla',
+            id: '173455'
+        },
+    ]
+    return (
+        <section className="panel-control">
+            <MenuLateral/>
             <section />
             <div className="panel-control-contenido">
-                <Card />
-                <Card />
-                <Card />
+                {
+                    envios.map((envio) => {
+                        return <Card info={envio} />
+                    })
+                }
             </div>
         </section>
-       
-        </>
     )
+
 }
 export default PanelControl;
