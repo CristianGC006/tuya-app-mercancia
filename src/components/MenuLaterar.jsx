@@ -1,4 +1,4 @@
-import imglogo from './assets/UsuarioIcono.png';
+import imglogo from '../assets/UsuarioIcono.png';
 export default function MenuLateral(){
     return(
         <aside className="panel-control-aside">
