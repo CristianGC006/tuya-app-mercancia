@@ -1,5 +1,4 @@
 function Card({info}){
-
     return( <section className="panel-control-card">
         <div>
             <h3>Id:{info.id}</h3>
